@@ -1,0 +1,9 @@
+<div class="form-grid">
+    <div class="form-group"><label class="form-label" for="{{ $prefix }}-name">Nama <span class="required">*</span></label><input class="form-control" id="{{ $prefix }}-name" name="name" required></div>
+    <div class="form-group"><label class="form-label" for="{{ $prefix }}-email">Email <span class="required">*</span></label><input class="form-control" id="{{ $prefix }}-email" type="email" name="email" required></div>
+    <div class="form-group"><label class="form-label" for="{{ $prefix }}-role">Peran <span class="required">*</span></label><select class="form-select user-role-select" id="{{ $prefix }}-role" name="role" data-company-target="{{ $prefix }}-company-group" required><option value="admin">Administrator</option><option value="pic">PIC Project</option><option value="client">Klien</option></select></div>
+    <div class="form-group" id="{{ $prefix }}-company-group"><label class="form-label" for="{{ $prefix }}-company">Nama Perusahaan</label><input class="form-control" id="{{ $prefix }}-company" name="company_name"></div>
+    <div class="form-group"><label class="form-label" for="{{ $prefix }}-password">Kata Sandi {{ isset($editing) ? '' : '*' }}</label><input class="form-control" id="{{ $prefix }}-password" type="password" name="password" {{ isset($editing) ? '' : 'required' }}><small class="form-help">Minimal 8 karakter{{ isset($editing) ? '; kosongkan jika tidak diubah' : '' }}.</small></div>
+    <div class="form-group"><label class="form-label" for="{{ $prefix }}-password-confirmation">Konfirmasi Kata Sandi</label><input class="form-control" id="{{ $prefix }}-password-confirmation" type="password" name="password_confirmation"></div>
+    <div class="form-group form-group-full"><label class="form-check"><input type="checkbox" class="check-input" id="{{ $prefix }}-active" name="is_active" value="1" checked><span class="check-label">Akun aktif</span></label></div>
+</div>
